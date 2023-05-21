@@ -17,3 +17,11 @@ static void csum(int ind,vector<int>& candidates, int target,vector<vector<int>>
             ans.pop_back();
         }    
      }
+
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+
+         vector<vector<int>> sol;vector<int> ans;
+        sort(candidates.begin(),candidates.end()); // IMPORTANT
+        csum(0,candidates,target,sol,ans);
+        return sol;
+    }
